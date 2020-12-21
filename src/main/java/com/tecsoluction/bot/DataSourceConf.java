@@ -34,9 +34,9 @@ public class DataSourceConf {
 		//heroku
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://ec2-52-206-44-27.compute-1.amazonaws.com:5432/dc66mrokcu9vi7");
-        dataSource.setUsername("mqfxnxxnfdibrw");        
-        dataSource.setPassword("f2ee575663c572081d8413865dc4940474fcc7a4908e232c81d3bab71b8a5949");
+        dataSource.setUrl("jdbc:postgresql://ec2-52-44-139-108.compute-1.amazonaws.com:5432/d4fcv1t5c4n5to");
+        dataSource.setUsername("evyyqsvwvpwabv");        
+        dataSource.setPassword("48e705de3fc33bd401dc52b83a4483ab8cc30603225f93e84bd5c373b4569e36");
 
     	return dataSource;
     }
