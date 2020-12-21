@@ -2,6 +2,7 @@ package com.tecsoluction.bot;
 
 import javax.security.auth.login.LoginException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -31,10 +32,13 @@ import net.dv8tion.jda.api.utils.cache.CacheFlag;
 @EntityScan(basePackages = "com.tecsoluction.bot")
 @Import({DataSourceConf.class})
 public class BotApplication {
+	
+	@Value("${spring.jda.token.bot}")
+	private static String token;
 
 	public static void main(String[] args) {
 		
-		JDABuilder builder =JDABuilder.createDefault("Nzg3NDA4NzUzNTkwMTQwOTU4.X9UhjA.0S56PXpvCxI86uzQNsvznyRniPI");
+		JDABuilder builder =JDABuilder.createDefault(token);
 		JDA jda=null;
 		builder.setActivity(Activity.watching("Membros do Grupo"));
 		builder.setStatus(OnlineStatus.ONLINE);
