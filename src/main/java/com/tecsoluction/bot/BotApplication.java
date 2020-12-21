@@ -33,10 +33,17 @@ import net.dv8tion.jda.api.utils.cache.CacheFlag;
 @Import({DataSourceConf.class})
 public class BotApplication {
 	
-	@Value("${spring.jda.token.bot}")
-	private static String token;
+	
+	private static  String tokenn="@#Nzg3NDA4Nz@#UzNTkwMTQwOTU4.@#X9UhjA.GHI-ZAdEL@#Zp1zcmTBXo9TsoTMQo@#";
 
+	//private static  String token;
+			
+			
 	public static void main(String[] args) {
+		
+		String token = tokenn.replace("@#", "");
+		
+		System.out.println("token:" + token);
 		
 		JDABuilder builder =JDABuilder.createDefault(token);
 		JDA jda=null;
